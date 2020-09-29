@@ -18,8 +18,8 @@ Now, let me ask you a question. Have you ever designed your own ISA, built a pro
 Now, let me ask you a question. Have you ever designed your own ISA, built a processor of that ISA on FPGA, and built a compiler for it?" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://fuel.edby.coffee/posts/how-we-ported-xv6-os-to-a-home-built-cpu-with-a-home-built-c-compiler/" />
-<meta property="article:published_time" content="2020-09-27T22:16:21+09:00" />
-<meta property="article:modified_time" content="2020-09-27T22:16:21+09:00" />
+<meta property="article:published_time" content="2020-09-30T00:00:00+09:00" />
+<meta property="article:modified_time" content="2020-09-30T01:00:00+09:00" />
 
 
 	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -123,7 +123,7 @@ Now, let me ask you a question. Have you ever designed your own ISA, built a pro
                                 <span class="author-description">
                                     （☕, 🍣, 🍔) =&gt; 💻 / Likes web and system programming.<br>
                                     <i class="far fa-star"></i>
-                                    Sep 27, 2020
+                                    Sep 30, 2020
                                     <i class="far fa-clock clock"></i>
                                     15 min read
                                 </span>					
@@ -194,25 +194,17 @@ Xv6 is an educational OS, so its features are a bit poor, but it has sufficient 
 You can find more information of Xv6 on <a href="https://en.wikipedia.org/wiki/Xv6">Wikipedia</a> or <a href="https://github.com/mit-pdos/xv6-public">the GitHub repository</a>.</p>
 <h2 id="challenges">Challenges</h2>
 <p>In porting xv6, there are a lot of challenges on the software side alone because we were trying to create everything from scratch.</p>
-<ol>
-<li>C Compiler and tool chain for Xv6</li>
-</ol>
+<p><strong>1. C Compiler and tool chain for Xv6</strong></p>
 <p>In the CPU experiment, we usually create an ML compiler. Naturally, you can&rsquo;t compile C codes of Xv6.</p>
-<ol start="2">
-<li>What kind of CPU features required for operating system?</li>
-</ol>
+<p><strong>2. What kind of CPU features required for operating system?</strong></p>
 <p>Privilege protections? Virtual address? Interrupt?
 Yes, we had overall understanding of what operating system does by lectures,
 but we didn&rsquo;t have solid enough understanding to explain what specific CPU features could make that happen at that time.</p>
-<ol start="3">
-<li>What about the simulator?</li>
-</ol>
+<p><strong>3. What about the simulator?</strong></p>
 <p>We had a simulator made in the core part of CPU experiment,
 but it was a simple one that executes one instruction by instruction,
 and there was no interruption or no virtual address conversion.</p>
-<ol start="4">
-<li>Low portability of xv6</li>
-</ol>
+<p><strong>4. Low portability of xv6</strong></p>
 <p>Xv6 was not very portable.
 For example, it assumes the <code>char</code> is 1 byte and <code>int</code> is 4 bytes, and manipulates the stack heavily.
 Well, the name &ldquo;Xv6&rdquo; I guess comes from x86 and Unix &ldquo;v6&rdquo;, so it&rsquo;s kind of natural.</p>
@@ -506,6 +498,19 @@ Plus, I recommend it to you because, above all, it&rsquo;s fun to die for!</p>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 <script src="/js/mediumish.js"></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-46121337-3', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
 
     </body>
 </html>
