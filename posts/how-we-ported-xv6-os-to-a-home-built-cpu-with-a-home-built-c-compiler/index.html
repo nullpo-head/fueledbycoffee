@@ -253,7 +253,7 @@ At this stage I got a solid understanding of the CPU functionality required for 
 As a result, Xv6 on the simulator of our homebrew architecture showed the first message of the boot sequence,</p>
 <pre><code>xv6...
 cpu0: starting...
-</code></pre><p>At the same time, this meant that by this time Ucc had already grown enough to compile most of xv6, which was awesome.</p>
+</code></pre><p>At the same time, this meant that by this time Ucc had already grown enough to compile most of xv6, which was awesome.<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>
 <h2 id="february---our-cpu-gaia-was-born">February - our CPU, GAIA was born!</h2>
 <p>In the MIPS port, I completed the initialization of the PIC, which was a real pain,
 and also completed the implementation of the interrupt handler.
@@ -410,7 +410,7 @@ The GitHub repository is <a href="https://github.com/nullpo-head/xv6-mips">here<
 <p>After we posted a blog post about the Group X challenge in 2015, later generations of students continued to take on new challenges around OS.</p>
 <p>In 2018, some students ran their own OS on top of a home-built CPU,
 and in 2019, a group of students ran their own OS while adopting RISC-V for their home-built CPU ISA.
-In addition, the group in 2020 finally ran Linux on top of a homebrew CPU that also adopted RISC-V as its ISA.<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>
+In addition, the group in 2020 finally ran Linux on top of a homebrew CPU that also adopted RISC-V as its ISA.<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup></p>
 <p>I&rsquo;m sure there will be many more stories in the future,
 so everyone please look forward to them.
 Personally, I look forward to someone running Linux on their own ISA someday, or running a VM on it.</p>
@@ -437,10 +437,18 @@ Plus, I recommend it to you because, above all, it&rsquo;s fun to die for!</p>
 I&rsquo;m working at Microsoft, and not all colleagues read Japanse. So, I&rsquo;m writing this English post. <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:2" role="doc-endnote">
+<p>Keiichi once told that one of the reasons they could grow Ucc so rapidly was that they wrote Ucc by OCaml.
+OCaml allows you to manipulate tree structure so easily without any pointer bugs.
+In addition, of course that&rsquo;s because they are awesome.
+BTW, for those who&rsquo;re interested in the preprocessor part, we used Clang&rsquo;s CPP.
+Did you know Clang&rsquo;s CPP can be used as a standalone command?
+<a href="http://kw-udon.hatenablog.com/entry/2015/03/19/171921">Keiichi has written his article about the compiler team in Japanese.</a> <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3" role="doc-endnote">
 <p>The all articles are written in Japanse.
 The articles <a href="http://yamaguchi-1024.hatenablog.com/entry/2018/02/27/172417">of the group who ran their own OS on top of a home-built CPU in 2018</a>,
 <a href="https://moraprogramming.hateblo.jp/entry/2019/03/17/165802">The group ran their own OS with their RISC-V CPU in 2019</a>,
-and <a href="https://diary.shift-js.info/building-a-riscv-cpu-for-linux/">the group in 2020 who ran Linux on their RISC-V CPU.</a> <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+and <a href="https://diary.shift-js.info/building-a-riscv-cpu-for-linux/">the group in 2020 who ran Linux on their RISC-V CPU.</a> <a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
 </section>
