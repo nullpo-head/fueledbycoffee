@@ -10,11 +10,11 @@
 
 	<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="How we ported Xv6 OS to a home-built CPU with a home-built C compiler"/>
-<meta name="twitter:description" content="I&rsquo;m a software engineer in Tokyo who&rsquo;s been working at Microsoft for over two years now. Sometimes I tell my colleagues about a student project I did in my junior year of university, and it was so well received that I&rsquo;m going to blog about it. 1
+<meta name="twitter:description" content="It&rsquo;s been two years since I started working as a software engineer in Tokyo. Sometimes I tell my colleagues about a student project I did in my junior year of university, and it was so well received that I&rsquo;m going to blog about it. 1
 Now, let me ask you a question. Have you ever designed your own ISA, built a processor of that ISA on FPGA, and built a compiler for it?"/>
 
 	<meta property="og:title" content="How we ported Xv6 OS to a home-built CPU with a home-built C compiler" />
-<meta property="og:description" content="I&rsquo;m a software engineer in Tokyo who&rsquo;s been working at Microsoft for over two years now. Sometimes I tell my colleagues about a student project I did in my junior year of university, and it was so well received that I&rsquo;m going to blog about it. 1
+<meta property="og:description" content="It&rsquo;s been two years since I started working as a software engineer in Tokyo. Sometimes I tell my colleagues about a student project I did in my junior year of university, and it was so well received that I&rsquo;m going to blog about it. 1
 Now, let me ask you a question. Have you ever designed your own ISA, built a processor of that ISA on FPGA, and built a compiler for it?" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://fuel.edby.coffee/posts/how-we-ported-xv6-os-to-a-home-built-cpu-with-a-home-built-c-compiler/" />
@@ -143,7 +143,7 @@ Now, let me ask you a question. Have you ever designed your own ISA, built a pro
 
                     
                     <div class="article-post">
-                        <p>I&rsquo;m a software engineer in Tokyo who&rsquo;s been working at Microsoft for over two years now.
+                        <p>It&rsquo;s been two years since I started working as a software engineer in Tokyo.
 Sometimes I tell my colleagues about a student project I did in my junior year of university,
 and it was so well received that I&rsquo;m going to blog about it.
 <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
@@ -408,9 +408,9 @@ which wasn&rsquo;t finished at the time of the CPU experiment,
 was finished a month after the experiment.
 The GitHub repository is <a href="https://github.com/nullpo-head/xv6-mips">here</a>.</p>
 <p>After we posted a blog post about the Group X challenge in 2015, later generations of students continued to take on new challenges around OS.</p>
-<p>In 2018, some students ran their own OS on top of a home-built CPU<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>,
-and in 2019, a group of students ran their own OS while adopting RISC-V for their home-built CPU ISA.<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>
-In addition, the group in 2020 finally ran Linux on top of a homebrew CPU that also adopted RISC-V as its ISA.<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup></p>
+<p>In 2018, some students ran their own OS on top of a home-built CPU,
+and in 2019, a group of students ran their own OS while adopting RISC-V for their home-built CPU ISA.
+In addition, the group in 2020 finally ran Linux on top of a homebrew CPU that also adopted RISC-V as its ISA.<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>
 <p>I&rsquo;m sure there will be many more stories in the future,
 so everyone please look forward to them.
 Personally, I look forward to someone running Linux on their own ISA someday, or running a VM on it.</p>
@@ -433,16 +433,14 @@ Plus, I recommend it to you because, above all, it&rsquo;s fun to die for!</p>
 <hr>
 <ol>
 <li id="fn:1" role="doc-endnote">
-<p>If you can read Japanese, you can read my past post <a href="http://nullpo-head.hateblo.jp/entry/2015/03/24/205419">here</a>. <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>If you can read Japanese, you can read my past post <a href="http://nullpo-head.hateblo.jp/entry/2015/03/24/205419">here</a>.
+I&rsquo;m working at Microsoft, and not all colleagues read Japanse. So, I&rsquo;m writing this English post. <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:2" role="doc-endnote">
-<p>The all articles are written in Japanse. <a href="http://yamaguchi-1024.hatenablog.com/entry/2018/02/27/172417">Link</a> <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-<li id="fn:3" role="doc-endnote">
-<p><a href="http://yamaguchi-1024.hatenablog.com/entry/2018/02/27/172417">In Japanese. Link</a> <a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-<li id="fn:4" role="doc-endnote">
-<p><a href="https://diary.shift-js.info/building-a-riscv-cpu-for-linux/">In Japanese. Link</a> <a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>The all articles are written in Japanse.
+The articles <a href="http://yamaguchi-1024.hatenablog.com/entry/2018/02/27/172417">of the group who ran their own OS on top of a home-built CPU in 2018</a>,
+<a href="https://moraprogramming.hateblo.jp/entry/2019/03/17/165802">The group ran their own OS with their RISC-V CPU in 2019</a>,
+and <a href="https://diary.shift-js.info/building-a-riscv-cpu-for-linux/">the group in 2020 who ran Linux on their RISC-V CPU.</a> <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
 </section>
