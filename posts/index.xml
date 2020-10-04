@@ -14,8 +14,8 @@
       <pubDate>Sun, 04 Oct 2020 20:00:00 +0900</pubDate>
       
       <guid>https://fuel.edby.coffee/posts/how-we-ported-xv6-os-to-a-home-built-cpu-with-a-home-built-c-compiler/</guid>
-      <description>It&amp;rsquo;s been two years since I started working as a software engineer in Tokyo. Sometimes I tell my colleagues about a student project I did in my junior year of university, and it was so well received that I&amp;rsquo;m going to blog about it. 1
-Now, let me ask you a question. Have you ever designed your own ISA, built a processor of that ISA on FPGA, and built a compiler for it?</description>
+      <description>Have you ever designed your own ISA, built a processor of that ISA on FPGA, and built a compiler for it? Furthermore, have you run an operating system on that processor? Actually, we have.
+In this post, I&amp;rsquo;m going to talk about my undergraduate days in 2015, our four months of building a home-built CPU of a home-built RISC ISA, building a home-built C toolchain, and porting Xv6, a Unix-like OS, to that CPU.</description>
     </item>
     
   </channel>

@@ -10,12 +10,12 @@
 
 	<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="How we ran a Unix-like OS (Xv6), on our home-built CPU with our home-built C compiler"/>
-<meta name="twitter:description" content="It&rsquo;s been two years since I started working as a software engineer in Tokyo. Sometimes I tell my colleagues about a student project I did in my junior year of university, and it was so well received that I&rsquo;m going to blog about it. 1
-Now, let me ask you a question. Have you ever designed your own ISA, built a processor of that ISA on FPGA, and built a compiler for it?"/>
+<meta name="twitter:description" content="Have you ever designed your own ISA, built a processor of that ISA on FPGA, and built a compiler for it? Furthermore, have you run an operating system on that processor? Actually, we have.
+In this post, I&rsquo;m going to talk about my undergraduate days in 2015, our four months of building a home-built CPU of a home-built RISC ISA, building a home-built C toolchain, and porting Xv6, a Unix-like OS, to that CPU."/>
 
 	<meta property="og:title" content="How we ran a Unix-like OS (Xv6), on our home-built CPU with our home-built C compiler" />
-<meta property="og:description" content="It&rsquo;s been two years since I started working as a software engineer in Tokyo. Sometimes I tell my colleagues about a student project I did in my junior year of university, and it was so well received that I&rsquo;m going to blog about it. 1
-Now, let me ask you a question. Have you ever designed your own ISA, built a processor of that ISA on FPGA, and built a compiler for it?" />
+<meta property="og:description" content="Have you ever designed your own ISA, built a processor of that ISA on FPGA, and built a compiler for it? Furthermore, have you run an operating system on that processor? Actually, we have.
+In this post, I&rsquo;m going to talk about my undergraduate days in 2015, our four months of building a home-built CPU of a home-built RISC ISA, building a home-built C toolchain, and porting Xv6, a Unix-like OS, to that CPU." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://fuel.edby.coffee/posts/how-we-ported-xv6-os-to-a-home-built-cpu-with-a-home-built-c-compiler/" />
 <meta property="article:published_time" content="2020-10-04T20:00:00+09:00" />
@@ -153,17 +153,13 @@ Now, let me ask you a question. Have you ever designed your own ISA, built a pro
 
                     
                     <div class="article-post">
-                        <p>It&rsquo;s been two years since I started working as a software engineer in Tokyo.
-Sometimes I tell my colleagues about a student project I did in my junior year of university,
-and it was so well received that I&rsquo;m going to blog about it.
-<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
-<p>Now, let me ask you a question.
-Have you ever designed your own ISA, built a processor of that ISA on FPGA, and built a compiler for it?
+                        <p>Have you ever designed your own ISA, built a processor of that ISA on FPGA, and built a compiler for it?
 Furthermore, have you run an operating system on that processor?
-We have.</p>
+Actually, we have.</p>
 <p>In this post, I&rsquo;m going to talk about my undergraduate days in 2015,
 our four months of building a home-built CPU of a home-built RISC ISA,
-building a home-built C toolchain, and porting Xv6, a Unix-like OS, to that CPU.</p>
+building a home-built C toolchain, and porting Xv6, a Unix-like OS, to that CPU.
+I&rsquo;ve talked about this before to a colleague and it was so well received that I&rsquo;m writing this blog post.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
 <h2 id="cpu-experiment-at-the-university-of-tokyo">CPU Experiment at the University of Tokyo</h2>
 <p>It was all done as a student experiment project called CPU Experiment.
 So, let&rsquo;s start with what is CPU experiment.</p>
