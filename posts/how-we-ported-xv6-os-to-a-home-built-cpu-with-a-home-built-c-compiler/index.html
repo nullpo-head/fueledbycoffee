@@ -174,10 +174,9 @@ Each group designs an own CPU architecture, implements it on an FPGA,
 builds an OCaml subset compiler for that CPU, and then runs a given ray-tracing program on the CPU.
 Typically, one or two people are responsible for each of the CPU, FPU, CPU simulator and compiler.
 I was in charge of the CPU in my group, Group 6.</p>
-<p>By the way, here&rsquo;s one heartwarming story.
-This exercise is well known for the high expectation of self learning.
+<p>This exercise is well known for the high expectation of self learning.
 The instructor only asks the students to &ldquo;take this ray-tracing program written in OCaml and run it on your CPU implemented on an FPGA&rdquo;, and the class ends.
-They doesn&rsquo;t tell much about the concrete steps of how to write CPU and compilers.
+He/she doesn&rsquo;t tell much about the concrete steps of how to write CPU and compilers.
 The students learn for themselves how to embody the general knowledge of CPUs and compilers learned in previous lectures to the level of real circuits and code.
 Well, this is a very tough exercise, but very exciting and educational.</p>
 <h2 id="lets-run-operating-system-on-our-own-cpu">Let&rsquo;s run Operating System on our own CPU.</h2>
@@ -224,7 +223,10 @@ and there was no interruption or no virtual address conversion.</p>
 For example, it assumes the <code>char</code> is 1 byte and <code>int</code> is 4 bytes, and manipulates the stack heavily.
 Well, the name &ldquo;Xv6&rdquo; I guess comes from x86 and Unix &ldquo;v6&rdquo;, so it&rsquo;s kind of natural.</p>
 <p>We had a lot of concerns, but started the Group X&rsquo;s OS porting project in December.<br>
-From here I&rsquo;m going to write about what we did in roughly chronological order.</p>
+From here I&rsquo;m going to write about what we did in roughly chronological order.
+It&rsquo;s a little bit long, so if you want to look at our final products quickly, <a href="#march---xv6-runs">please jump to March</a>
+
+.</p>
 <h2 id="late-november---starting-the-compiler">Late November - Starting the compiler</h2>
 <p>The first problem that we saw the answer to was the compiler and tool chain.
 To be surprise, our decision was to build the C89 compiler from scratch.
