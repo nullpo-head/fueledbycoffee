@@ -9,7 +9,7 @@
     <copyright>Takaya Saeki</copyright>
     <lastBuildDate>Sun, 27 Sep 2020 22:16:21 +0900</lastBuildDate><atom:link href="https://fuel.edby.coffee/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>How we ported Xv6 OS to a home-built CPU with a home-built C compiler</title>
+      <title>How we ran a Unix-like OS (Xv6), on a home-built CPU with a home-built C compiler</title>
       <link>https://fuel.edby.coffee/posts/how-we-ported-xv6-os-to-a-home-built-cpu-with-a-home-built-c-compiler/</link>
       <pubDate>Sun, 04 Oct 2020 20:00:00 +0900</pubDate>
       
