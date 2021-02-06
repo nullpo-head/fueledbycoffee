@@ -14,8 +14,9 @@
       <pubDate>Sun, 04 Oct 2020 20:00:00 +0900</pubDate>
       
       <guid>https://fuel.edby.coffee/posts/how-we-ported-xv6-os-to-a-home-built-cpu-with-a-home-built-c-compiler/</guid>
-      <description>It&amp;rsquo;s been two years since I started working as a software engineer. I sometimes tell my colleagues about a student project I did in my junior year of university, and it&amp;rsquo;s so well-received that I&amp;rsquo;m writing this post. 1
-Now, let me ask you a question. Have you ever designed your own ISA, built a processor of that ISA on FPGA, and built a compiler for it? Furthermore, have you run an operating system on that processor?</description>
+      <description>[Thanks for many comments and votes on Hacker News! ]
+It&amp;rsquo;s been two years since I started working as a software engineer. I sometimes tell my colleagues about a student project I did in my junior year of university, and it&amp;rsquo;s so well-received that I&amp;rsquo;m writing this post. 1
+Now, let me ask you a question. Have you ever designed your own ISA, built a processor of that ISA on FPGA, and built a compiler for it?</description>
     </item>
     
   </channel>
