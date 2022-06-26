@@ -2,7 +2,7 @@
 <html lang="en-us"><head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="generator" content="Hugo 0.75.1" />
+	<meta name="generator" content="Hugo 0.101.0" />
 	
 	<title>Takaya Saeki (佐伯 学哉) | Fueled by Coffee</title>
 	
@@ -16,7 +16,7 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://fuel.edby.coffee/" />
-<meta property="og:updated_time" content="2020-09-27T22:16:21+09:00" />
+
 
 
 	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -108,12 +108,9 @@ Likes web and system programming.</h6>
 </section>
 <section>
             <h3 id="about-takaya-saeki-佐伯学哉">About Takaya Saeki (佐伯学哉)</h3>
-<p>A software engineer in Tokyo, currently working at <a href="https://www.tetrate.io/" target="_blank">Tetrate.io, Inc</a>
-
-. Previously worked at Microsoft.<br>
-Has unique development experience ranging from CPU, OS, hypervisors and programming languages
+<p>A software engineer in Tokyo. Has unique development experience ranging from CPU, OS, hypervisor and programming languages
 to one of the largest online dating services in Japan and one of the largest web search services in the world.</p>
-<h3 id="public-projects">Public Projects</h3>
+<h3 id="personal-projects">Personal Projects</h3>
 <ul>
 <li>
 <p><a href="https://github.com/linux-noah/noah" target="_blank">Noah <i class="fab fa-github social-icon" aria-hidden="true" style="font-size: 1em;"></i><span style="font-size: 0.7em; color: rgba(0, 0, 0, 0.44); margin-left: 1px;">1.8k&#43;</span>
@@ -123,8 +120,7 @@ to one of the largest online dating services in Japan and one of the largest web
 </a>
 
 </p>
-<p><a href="https://github.com/linux-noah/noah" target="_blank"><figure>
-    <img src="/images/noah-screenshot.png" width="400"/> 
+<p><a href="https://github.com/linux-noah/noah" target="_blank"><figure><img src="/images/noah-screenshot.png" width="400"/>
 </figure>
 </a>
 
@@ -193,8 +189,7 @@ building a home-built C toolchain, and porting Xv6, a Unix-like OS, to that CPU.
 This PAM module allows you to authenticate sudo via face recognition,
 fingerprint authentication, and of couse machine-local PIN.
 It runs in both WSL and WSL 2.</p>
-<p><a href="https://github.com/nullpo-head/WSL-Hello-sudo" target="_blank"><figure>
-    <img src="/images/wslhello-demo.gif" width="400"/> 
+<p><a href="https://github.com/nullpo-head/WSL-Hello-sudo" target="_blank"><figure><img src="/images/wslhello-demo.gif" width="400"/>
 </figure>
 </a>
 
@@ -209,23 +204,23 @@ It runs in both WSL and WSL 2.</p>
 and sync the shell environments between Bash and the Windows command line.
 It&rsquo;s an essential tool for me to do my daily work on WSL,
 which requires me to run initialization scripts written for Windows.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cat init.bat
-@echo off
-set ENV1<span style="color:#f92672">=</span>bar!      ; Environment variables will be synced
-echo foo!          ; Execute Windows echo commands
-$ sw init.bat      <span style="color:#75715e"># init.bat is executed</span>
-foo!
-$ echo $ENV1       <span style="color:#75715e"># ENV1 is synced!</span>
-bar!
-$ export ENV2<span style="color:#f92672">=</span>baz! <span style="color:#75715e"># ENV2 is set in Linux</span>
-$ cat env2.bat
-@echo off
-echo %ENV2%
-$ sw env2.bat      <span style="color:#75715e"># ENV2 is exported to Windows command line</span>
-baz!
-$ sw echo %ENV2%   <span style="color:#75715e"># You also can run commands directly</span>
-baz!
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ cat init.bat
+</span></span><span style="display:flex;"><span>@echo off
+</span></span><span style="display:flex;"><span>set ENV1<span style="color:#f92672">=</span>bar!      ; Environment variables will be synced
+</span></span><span style="display:flex;"><span>echo foo!          ; Execute Windows echo commands
+</span></span><span style="display:flex;"><span>$ sw init.bat      <span style="color:#75715e"># init.bat is executed</span>
+</span></span><span style="display:flex;"><span>foo!
+</span></span><span style="display:flex;"><span>$ echo $ENV1       <span style="color:#75715e"># ENV1 is synced!</span>
+</span></span><span style="display:flex;"><span>bar!
+</span></span><span style="display:flex;"><span>$ export ENV2<span style="color:#f92672">=</span>baz! <span style="color:#75715e"># ENV2 is set in Linux</span>
+</span></span><span style="display:flex;"><span>$ cat env2.bat
+</span></span><span style="display:flex;"><span>@echo off
+</span></span><span style="display:flex;"><span>echo %ENV2%
+</span></span><span style="display:flex;"><span>$ sw env2.bat      <span style="color:#75715e"># ENV2 is exported to Windows command line</span>
+</span></span><span style="display:flex;"><span>baz!
+</span></span><span style="display:flex;"><span>$ sw echo %ENV2%   <span style="color:#75715e"># You also can run commands directly</span>
+</span></span><span style="display:flex;"><span>baz!
+</span></span></code></pre></div></li>
 <li>
 <p>Programming Language that Runs on Feature Phones</p>
 <p>When I was in high school,
@@ -236,8 +231,7 @@ Try <a href="https://hamayapp.appspot.com/static/sp_interpreter.html" target="_b
 
 , which is ported by a user.
 It&rsquo;s not strictly a port of my version, but it has all the features of mine, including the undocumented ones.</p>
-<p><a href="http://www.wikihouse.com/spalm/index.php?more%CD%D1%A5%DA%A5%A4%A5%F3%A5%C8%A5%BD%A1%BC%A5%B9" target="_blank"><figure>
-    <img src="/images/paint.png" width="150"/> 
+<p><a href="http://www.wikihouse.com/spalm/index.php?more%CD%D1%A5%DA%A5%A4%A5%F3%A5%C8%A5%BD%A1%BC%A5%B9" target="_blank"><figure><img src="/images/paint.png" width="150"/>
 </figure>
 </a>
 
@@ -311,6 +305,5 @@ if (!doNotTrack) {
 	ga('send', 'pageview');
 }
 </script>
-
     </body>
 </html>

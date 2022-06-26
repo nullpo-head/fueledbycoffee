@@ -1,28 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
-  <url>
-    <loc>https://fuel.edby.coffee/posts/how-we-ported-xv6-os-to-a-home-built-cpu-with-a-home-built-c-compiler/</loc>
-    <lastmod>2020-10-04T20:00:00+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://fuel.edby.coffee/posts/</loc>
-    <lastmod>2020-10-04T20:00:00+09:00</lastmod>
-  </url>
-  
   <url>
     <loc>https://fuel.edby.coffee/</loc>
-    <lastmod>2020-09-27T22:16:21+09:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2022-06-26T23:13:00+09:00</lastmod>
+  </url><url>
+    <loc>https://fuel.edby.coffee/posts/how-we-ported-xv6-os-to-a-home-built-cpu-with-a-home-built-c-compiler/</loc>
+    <lastmod>2020-10-04T20:00:00+09:00</lastmod>
+  </url><url>
+    <loc>https://fuel.edby.coffee/posts/</loc>
+    <lastmod>2020-10-04T20:00:00+09:00</lastmod>
+  </url><url>
     <loc>https://fuel.edby.coffee/categories/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://fuel.edby.coffee/tags/</loc>
   </url>
-  
 </urlset>

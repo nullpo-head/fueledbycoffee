@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Takaya Saeki</copyright>
-    <lastBuildDate>Sun, 27 Sep 2020 22:16:21 +0900</lastBuildDate><atom:link href="https://fuel.edby.coffee/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 26 Jun 2022 23:13:00 +0900</lastBuildDate><atom:link href="https://fuel.edby.coffee/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How we ran a Unix-like OS (Xv6) on our home-built CPU with our home-built C compiler</title>
       <link>https://fuel.edby.coffee/posts/how-we-ported-xv6-os-to-a-home-built-cpu-with-a-home-built-c-compiler/</link>

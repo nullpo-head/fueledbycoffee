@@ -2,7 +2,7 @@
 <html lang="en-us"><head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="generator" content="Hugo 0.75.1" />
+	<meta name="generator" content="Hugo 0.101.0" />
 	
 	<title>How we ran a Unix-like OS (Xv6) on our home-built CPU with our home-built C compiler | Fueled by Coffee</title>
 	
@@ -19,9 +19,10 @@ Now, let me ask you a question. Have you ever designed your own ISA, built a pro
 It&rsquo;s been two years since I started working as a software engineer. I sometimes tell my colleagues about a student project I did in my junior year of university, and it&rsquo;s so well-received that I&rsquo;m writing this post. 1
 Now, let me ask you a question. Have you ever designed your own ISA, built a processor of that ISA on FPGA, and built a compiler for it?" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://fuel.edby.coffee/posts/how-we-ported-xv6-os-to-a-home-built-cpu-with-a-home-built-c-compiler/" />
+<meta property="og:url" content="https://fuel.edby.coffee/posts/how-we-ported-xv6-os-to-a-home-built-cpu-with-a-home-built-c-compiler/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2020-10-04T20:00:00+09:00" />
 <meta property="article:modified_time" content="2020-10-04T20:00:00+09:00" />
+
 
 
 	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -272,7 +273,7 @@ Thanks to that, I understood mechanisms around interrupts and MMU at the impleme
 At this stage I got a solid understanding of the CPU functionality required for Xv6.</p>
 <p>Also, in mid-January, we worked hard to compile the entire Xv6 code by commenting out the various parts.
 As a result, Xv6 on the simulator of our homebrew architecture showed the first message of the boot sequence,</p>
-<pre><code>xv6...
+<pre tabindex="0"><code>xv6...
 cpu0: starting...
 </code></pre><p>At the same time, this meant that by this time Ucc had already grown enough to compile most of xv6, which was awesome.<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>
 <h2 id="february---our-cpu-gaia-was-born">February - our CPU, GAIA was born!</h2>
@@ -302,8 +303,7 @@ Interrupts are hard to understand, hard to figure out the flow, hard to debug, a
 <p>When I ported Xv6 to MIPS, I had GDB, so it was rather OK, but our own simulator didn&rsquo;t have any debug features, so it must have been very difficult to debug.
 Shohei couldn&rsquo;t bear the difficulty of debugging, so he added a disassembler and a debug dump function to the simulator.
 After this, the simulator&rsquo;s debugging features were rapidly upgraded by the OS team, and finally the simulator grew to look like the following picture.</p>
-<figure>
-    <img src="/images/simulator.png" width="600"/> 
+<figure><img src="/images/simulator.png" width="600"/>
 </figure>
 
 <h2 id="3rd-week">3rd Week</h2>
@@ -337,27 +337,23 @@ This means virtual addresses pointing to the same physical address will always h
 This allowed Xv6 to ensure that GAIA never had multiple caches which shared the same physical address.</p>
 <h2 id="march---xv6-runs">March - Xv6 Runs!</h2>
 <p>On 1st, the xv6 port is complete. xv6 was now running on the simulator&hellip;!</p>
-<figure>
-    <img src="/images/xv6runs.png" width="600"/> 
+<figure><img src="/images/xv6runs.png" width="600"/>
 </figure>
 
 <h3 id="there-should-be-no-shortage-of-entertainment">There should be no shortage of entertainment</h3>
 <p>Originally, the Xv6 port was meant to be fun, and since Xv6 started working on the simulator, we worked hard to add a lot more fun.</p>
 <p>First of all, a mini curses is created by Masayoshi in about 4 hours and the <code>sl</code> command run on our Xv6.</p>
-<figure>
-    <img src="/images/sl.png" width="600"/> 
+<figure><img src="/images/sl.png" width="600"/>
 </figure>
 
 <p>Shohei kind of wanted to do a Minesweeper.</p>
-<figure>
-    <img src="/images/minesweeper.png" width="600"/> 
+<figure><img src="/images/minesweeper.png" width="600"/>
 </figure>
 
 <p>During this period, Yuichi completed the implementation of the CPU of the Group X.
 The real CPU ran much faster than the simulator, which made the game easier to play and develop.
 At this time, a very high quality application, 2048, was created.</p>
-<figure>
-    <img src="/images/2048.png" width="600"/> 
+<figure><img src="/images/2048.png" width="600"/>
 </figure>
 
 <p>This 2048 was very high quality.
@@ -371,12 +367,10 @@ However, I adopted <code>ioctl</code> because Xv6 doesn&rsquo;t have the concept
 <p>Now, as something a little cooler, Xv6-GAIA has a small assembler made by Keiichi.
 Also it has a mini vi that Shohei made.
 Guess what you can do with these two.</p>
-<p><figure>
-    <img src="/images/vi.png" width="600"/> 
+<p><figure><img src="/images/vi.png" width="600"/>
 </figure>
 
-<figure>
-    <img src="/images/as.png" width="600"/> 
+<figure><img src="/images/as.png" width="600"/>
 </figure>
 </p>
 <p>It&rsquo;s interactive programming on an FPGA!
@@ -386,8 +380,7 @@ This is a pretty impressive demo for a CPU experiment, which usually doesn&rsquo
 Now that you&rsquo;ve got an operating system running on your CPU, you know what you&rsquo;re supposed to do, right?
 We decided to run the ray-tracing program &ldquo;on the OS &ldquo;on our own CPU.
 We had a few bugs, but we managed to finish it an hour before the final presentation.</p>
-<figure>
-    <img src="/images/minrt.jpg"/> 
+<figure><img src="/images/minrt.jpg"/>
 </figure>
 
 <p>So, we did what every student in the history of our department has probably joked at least once:
@@ -490,16 +483,16 @@ Plus, I recommend it to you because, above all, it&rsquo;s fun to die for!</p>
 
  - Random tasks</li>
 </ul>
-<section class="footnotes" role="doc-endnotes">
+<div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
-<li id="fn:1" role="doc-endnote">
+<li id="fn:1">
 <p>If you can read Japanese, you can read my past post <a href="http://nullpo-head.hateblo.jp/entry/2015/03/24/205419" target="_blank">here</a>
 
 .
-I&rsquo;m working at Microsoft, and not all colleagues read Japanse. So, I&rsquo;m writing this English post. <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+I&rsquo;m working at Microsoft, and not all colleagues read Japanse. So, I&rsquo;m writing this English post.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
-<li id="fn:2" role="doc-endnote">
+<li id="fn:2">
 <p>Keiichi once told that one of the reasons they could grow Ucc so rapidly was that they wrote Ucc by OCaml.
 OCaml allows you to manipulate tree structure so easily without any pointer bugs.
 In addition, of course that&rsquo;s because they are awesome.
@@ -507,9 +500,9 @@ BTW, for those who&rsquo;re interested in the preprocessor part, we used Clang&r
 Did you know Clang&rsquo;s CPP can be used as a standalone command?
 <a href="http://kw-udon.hatenablog.com/entry/2015/03/19/171921" target="_blank">Keiichi has written his article about the compiler team in Japanese.</a>
 
- <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
-<li id="fn:3" role="doc-endnote">
+<li id="fn:3">
 <p>The all articles are written in Japanse.
 The articles <a href="http://yamaguchi-1024.hatenablog.com/entry/2018/02/27/172417" target="_blank">of the group who ran their own OS on top of a home-built CPU in 2018</a>
 
@@ -519,10 +512,10 @@ The articles <a href="http://yamaguchi-1024.hatenablog.com/entry/2018/02/27/1724
 ,
 and <a href="https://diary.shift-js.info/building-a-riscv-cpu-for-linux/" target="_blank">the group in 2020 who ran Linux on their RISC-V CPU.</a>
 
- <a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
-</section>
+</div>
 
                     </div>
                     
@@ -588,6 +581,5 @@ if (!doNotTrack) {
 	ga('send', 'pageview');
 }
 </script>
-
     </body>
 </html>
