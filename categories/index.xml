@@ -4,8 +4,9 @@
     <title>Categories on Fueled by Coffee</title>
     <link>https://fuel.edby.coffee/categories/</link>
     <description>Recent content in Categories on Fueled by Coffee</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <copyright>Takaya Saeki</copyright><atom:link href="https://fuel.edby.coffee/categories/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>Takaya Saeki</copyright>
+    <atom:link href="https://fuel.edby.coffee/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

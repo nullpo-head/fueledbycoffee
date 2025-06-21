@@ -2,27 +2,37 @@
 <html lang="en-us"><head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="generator" content="Hugo 0.105.0">
+	<meta name="generator" content="Hugo 0.147.8">
 	
 	<title>How we ran a Unix-like OS (Xv6) on our home-built CPU with our home-built C compiler | Fueled by Coffee</title>
 	
 	
 
-	<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="How we ran a Unix-like OS (Xv6) on our home-built CPU with our home-built C compiler"/>
-<meta name="twitter:description" content="[Thanks for many comments and votes on Hacker News! ]
-It&rsquo;s been two years since I started working as a software engineer. I sometimes tell my colleagues about a student project I did in my junior year of university, and it&rsquo;s so well-received that I&rsquo;m writing this post. 1
-Now, let me ask you a question. Have you ever designed your own ISA, built a processor of that ISA on FPGA, and built a compiler for it?"/>
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+	<style> @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap'); </style>
 
-	<meta property="og:title" content="How we ran a Unix-like OS (Xv6) on our home-built CPU with our home-built C compiler" />
-<meta property="og:description" content="[Thanks for many comments and votes on Hacker News! ]
-It&rsquo;s been two years since I started working as a software engineer. I sometimes tell my colleagues about a student project I did in my junior year of university, and it&rsquo;s so well-received that I&rsquo;m writing this post. 1
-Now, let me ask you a question. Have you ever designed your own ISA, built a processor of that ISA on FPGA, and built a compiler for it?" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://fuel.edby.coffee/posts/how-we-ported-xv6-os-to-a-home-built-cpu-with-a-home-built-c-compiler/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2020-10-04T20:00:00+09:00" />
-<meta property="article:modified_time" content="2020-10-04T20:00:00+09:00" />
+	
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="How we ran a Unix-like OS (Xv6) on our home-built CPU with our home-built C compiler">
+  <meta name="twitter:description" content="[Thanks for many comments and votes on Hacker News! ]
+It’s been two years since I started working as a software engineer. I sometimes tell my colleagues about a student project I did in my junior year of university, and it’s so well-received that I’m writing this post. 1
+Now, let me ask you a question. Have you ever designed your own ISA, built a processor of that ISA on FPGA, and built a compiler for it? Furthermore, have you run an operating system on that processor? Actually, we have.">
+      <meta name="twitter:site" content="@nullpo_head_en">
 
+	<meta property="og:url" content="https://fuel.edby.coffee/posts/how-we-ported-xv6-os-to-a-home-built-cpu-with-a-home-built-c-compiler/">
+  <meta property="og:site_name" content="Fueled by Coffee">
+  <meta property="og:title" content="How we ran a Unix-like OS (Xv6) on our home-built CPU with our home-built C compiler">
+  <meta property="og:description" content="[Thanks for many comments and votes on Hacker News! ]
+It’s been two years since I started working as a software engineer. I sometimes tell my colleagues about a student project I did in my junior year of university, and it’s so well-received that I’m writing this post. 1
+Now, let me ask you a question. Have you ever designed your own ISA, built a processor of that ISA on FPGA, and built a compiler for it? Furthermore, have you run an operating system on that processor? Actually, we have.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2020-10-04T20:00:00+09:00">
+    <meta property="article:modified_time" content="2020-10-04T20:00:00+09:00">
 
 
 	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -49,7 +59,7 @@ Now, let me ask you a question. Have you ever designed your own ISA, built a pro
 <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
     <div class="container pr-0">
         
-        <a class="navbar-brand" href="https://fuel.edby.coffee/">
+        <a class="navbar-brand" href="https://fuel.edby.coffee//">
 
             
             <span style="font-family:'Palanquin', sans-serif;font-weight: 300;">Fueled by Coffee</span>
@@ -154,7 +164,8 @@ Now, let me ask you a question. Have you ever designed your own ISA, built a pro
                     
                     
 
-                    
+
+
                     <div class="article-post">
                         <p><em>[Thanks for many comments and votes on <a href="https://news.ycombinator.com/item?id=24680109" target="_blank">Hacker News!</a>
 
@@ -303,7 +314,7 @@ Interrupts are hard to understand, hard to figure out the flow, hard to debug, a
 <p>When I ported Xv6 to MIPS, I had GDB, so it was rather OK, but our own simulator didn&rsquo;t have any debug features, so it must have been very difficult to debug.
 Shohei couldn&rsquo;t bear the difficulty of debugging, so he added a disassembler and a debug dump function to the simulator.
 After this, the simulator&rsquo;s debugging features were rapidly upgraded by the OS team, and finally the simulator grew to look like the following picture.</p>
-<figure><img src="/images/simulator.png" width="600"/>
+<figure><img src="/images/simulator.png" width="600">
 </figure>
 
 <h2 id="3rd-week">3rd Week</h2>
@@ -337,23 +348,23 @@ This means virtual addresses pointing to the same physical address will always h
 This allowed Xv6 to ensure that GAIA never had multiple caches which shared the same physical address.</p>
 <h2 id="march---xv6-runs">March - Xv6 Runs!</h2>
 <p>On 1st, the xv6 port is complete. xv6 was now running on the simulator&hellip;!</p>
-<figure><img src="/images/xv6runs.png" width="600"/>
+<figure><img src="/images/xv6runs.png" width="600">
 </figure>
 
 <h3 id="there-should-be-no-shortage-of-entertainment">There should be no shortage of entertainment</h3>
 <p>Originally, the Xv6 port was meant to be fun, and since Xv6 started working on the simulator, we worked hard to add a lot more fun.</p>
 <p>First of all, a mini curses is created by Masayoshi in about 4 hours and the <code>sl</code> command run on our Xv6.</p>
-<figure><img src="/images/sl.png" width="600"/>
+<figure><img src="/images/sl.png" width="600">
 </figure>
 
 <p>Shohei kind of wanted to do a Minesweeper.</p>
-<figure><img src="/images/minesweeper.png" width="600"/>
+<figure><img src="/images/minesweeper.png" width="600">
 </figure>
 
 <p>During this period, Yuichi completed the implementation of the CPU of the Group X.
 The real CPU ran much faster than the simulator, which made the game easier to play and develop.
 At this time, a very high quality application, 2048, was created.</p>
-<figure><img src="/images/2048.png" width="600"/>
+<figure><img src="/images/2048.png" width="600">
 </figure>
 
 <p>This 2048 was very high quality.
@@ -367,10 +378,10 @@ However, I adopted <code>ioctl</code> because Xv6 doesn&rsquo;t have the concept
 <p>Now, as something a little cooler, Xv6-GAIA has a small assembler made by Keiichi.
 Also it has a mini vi that Shohei made.
 Guess what you can do with these two.</p>
-<p><figure><img src="/images/vi.png" width="600"/>
+<p><figure><img src="/images/vi.png" width="600">
 </figure>
 
-<figure><img src="/images/as.png" width="600"/>
+<figure><img src="/images/as.png" width="600">
 </figure>
 </p>
 <p>It&rsquo;s interactive programming on an FPGA!
@@ -380,7 +391,7 @@ This is a pretty impressive demo for a CPU experiment, which usually doesn&rsquo
 Now that you&rsquo;ve got an operating system running on your CPU, you know what you&rsquo;re supposed to do, right?
 We decided to run the ray-tracing program &ldquo;on the OS &ldquo;on our own CPU.
 We had a few bugs, but we managed to finish it an hour before the final presentation.</p>
-<figure><img src="/images/minrt.jpg"/>
+<figure><img src="/images/minrt.jpg">
 </figure>
 
 <p>So, we did what every student in the history of our department has probably joked at least once:
@@ -569,17 +580,5 @@ and <a href="https://diary.shift-js.info/building-a-riscv-cpu-for-linux/" target
 
 <script src="/js/mediumish.js"></script>
 
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'UA-46121337-3', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
     </body>
 </html>

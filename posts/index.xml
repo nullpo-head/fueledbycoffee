@@ -4,20 +4,17 @@
     <title>Posts on Fueled by Coffee</title>
     <link>https://fuel.edby.coffee/posts/</link>
     <description>Recent content in Posts on Fueled by Coffee</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>Takaya Saeki</copyright>
-    <lastBuildDate>Sun, 04 Oct 2020 20:00:00 +0900</lastBuildDate><atom:link href="https://fuel.edby.coffee/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 04 Oct 2020 20:00:00 +0900</lastBuildDate>
+    <atom:link href="https://fuel.edby.coffee/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How we ran a Unix-like OS (Xv6) on our home-built CPU with our home-built C compiler</title>
       <link>https://fuel.edby.coffee/posts/how-we-ported-xv6-os-to-a-home-built-cpu-with-a-home-built-c-compiler/</link>
       <pubDate>Sun, 04 Oct 2020 20:00:00 +0900</pubDate>
-      
       <guid>https://fuel.edby.coffee/posts/how-we-ported-xv6-os-to-a-home-built-cpu-with-a-home-built-c-compiler/</guid>
-      <description>[Thanks for many comments and votes on Hacker News! ]
-It&amp;rsquo;s been two years since I started working as a software engineer. I sometimes tell my colleagues about a student project I did in my junior year of university, and it&amp;rsquo;s so well-received that I&amp;rsquo;m writing this post. 1
-Now, let me ask you a question. Have you ever designed your own ISA, built a processor of that ISA on FPGA, and built a compiler for it?</description>
+      <description>&lt;p&gt;&lt;em&gt;[Thanks for many comments and votes on &lt;a href=&#34;https://news.ycombinator.com/item?id=24680109&#34; target=&#34;_blank&#34;&gt;Hacker News!&lt;/a&gt;&#xA;&#xA;]&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;It&amp;rsquo;s been two years since I started working as a software engineer.&#xA;I sometimes tell my colleagues about a student project I did in my junior year of university,&#xA;and it&amp;rsquo;s so well-received that I&amp;rsquo;m writing this post.&#xA;&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;&#xA;&lt;p&gt;Now, let me ask you a question. Have you ever designed your own ISA, built a processor of that ISA on FPGA, and built a compiler for it?&#xA;Furthermore, have you run an operating system on that processor?&#xA;Actually, we have.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

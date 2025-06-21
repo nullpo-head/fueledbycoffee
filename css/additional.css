@@ -33,3 +33,15 @@
     padding-left: 0px !important;
   }
 }
+.floatleft {
+  float: left;
+  margin: 0 1em 1em 0;
+}
+
+.floatright {
+  float: right;
+  margin: 0 0 1em 1em;
+}
+.floatclear {
+  clear: both;
+}
